@@ -84,3 +84,40 @@
 </body>
 
 </html> -->
+
+<!-- ++++++++++++++++++++++++++++++ -->
+<!-- Class 4 (Handling form in PHP) -->
+<!-- ++++++++++++++++++++++++++++++ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Handling form in PHP</h1>
+
+    <form action="includes/formHandler.php" method="post">
+        <label for="firstName"></label>
+        <input type="text" name="firstName" id="firstName">
+        
+        <label for="lastName"></label>
+        <input type="text" name="lastName" id="lastName">
+        
+        <label for="selectPet"></label>
+        <select name="selectPet" id="selectPet">
+            <option value="none">none</option>
+            <option value="cat">cat</option>
+            <option value="dog">dog</option>
+            <option value="bird">bird</option>
+        </select>
+
+        <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>
