@@ -124,10 +124,10 @@
 
 
 <!-- ++++++++++++++++++++++++++ -->
-<!-- Class 4 (Operators in php) -->
+<!-- Class 5 (Operators in php) -->
 <!-- ++++++++++++++++++++++++++ -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -155,6 +155,36 @@
         echo "Both condition is true";
     }
 
+    ?>
+</body>
+</html> -->
+
+
+<!-- ++++++++++++++++++++++++++++++++++ -->
+<!-- Class 6 (control structure in php) -->
+<!-- ++++++++++++++++++++++++++++++++++ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Control structure in php</h1>
+
+    <?php
+    $a = 3;
+
+    $result = match($a) {
+        1 => "Variable is one",
+        2 => "Variable is two",
+
+        default => "None is matched",
+    };
+
+    echo $result;
     ?>
 </body>
 </html>
