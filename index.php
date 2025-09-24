@@ -89,7 +89,7 @@
 <!-- Class 4 (Handling form in PHP) -->
 <!-- ++++++++++++++++++++++++++++++ -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -120,4 +120,41 @@
     </form>
 </body>
 
+</html> -->
+
+
+<!-- ++++++++++++++++++++++++++ -->
+<!-- Class 4 (Operators in php) -->
+<!-- ++++++++++++++++++++++++++ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operators in php</h1>
+
+    <?php
+    $a = 'Hello';
+    $b = 'world!';
+
+    $c = $a . ' ' . $b;
+
+    echo $c;
+    echo "<br>";
+    
+    if (5 == 5 or 4 == 5) {
+        echo "One condition is true";
+    }
+    
+    echo "<br>";
+    if (5 == 5 and 4 == 4) {
+        echo "Both condition is true";
+    }
+
+    ?>
+</body>
 </html>
