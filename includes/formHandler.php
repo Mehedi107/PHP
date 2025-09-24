@@ -6,6 +6,11 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     $lastName = htmlspecialchars($_POST['lastName']);
     $selectedPet = htmlspecialchars($_POST['selectPet']);
 
+    if (empty($firstName)) {
+        exit();
+        header('Location: ../index.php');
+    }
+
     echo $firstName;
     echo "<br>";
     echo $lastName;
