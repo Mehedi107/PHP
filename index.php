@@ -164,7 +164,7 @@
 <!-- Class 6 (control structure in php) -->
 <!-- ++++++++++++++++++++++++++++++++++ -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -185,6 +185,84 @@
     };
 
     echo $result;
+    ?>
+</body>
+</html> -->
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<!-- Class 7 (PHP expecise: Build calculator) -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PHP expecise: Build calculator</h1>
+
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
+        <input type="number" name="num01" placeholder="number one" required>
+
+        <select name="operator" id="">
+            <option value="add">+</option>
+            <option value="subtract">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+        </select>
+
+        <input type="number" name="num02" placeholder="number one" required>
+
+        <button>Calculate</button>
+    </form>
+
+    <?php
+    $error = false;
+    // get input data
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $num1 = filter_input(INPUT_POST, "num01", FILTER_SANITIZE_NUMBER_FLOAT);
+        $num2 = filter_input(INPUT_POST, "num02", FILTER_SANITIZE_NUMBER_FLOAT);
+        $operator = htmlspecialchars($_POST['operator']);
+
+    }
+
+    // if empty input field
+    if (empty($num1) || empty($num2) || empty($operator)) {
+        echo '<p style="color: red;">Please fill out the form!</p>';
+        $error = true;
+    }
+
+    // if input not a number
+    if (!is_numeric($num1) || !is_numeric($num2)) {
+        echo '<p style="color: red;">Please enter a number!</p>';
+        $error = true;
+    }
+
+    if (!$error) {
+        $value = 0;
+
+        switch ($operator) {
+        case 'add':
+            $value = $num1 + $num2;
+            break;
+        case 'subtract':
+            $value = $num1 - $num2;
+            break;
+        case 'multiply':
+            $value = $num1 * $num2;
+            break;
+        case 'divide':
+            $value = $num1 / $num2;
+            break;
+        default: 
+            echo '<p style="color: red;">Something went wrong!</p>';
+        }
+
+        echo "Result: " . $value . "</p>";
+    }
     ?>
 </body>
 </html>
