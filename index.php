@@ -194,7 +194,7 @@
 <!-- Class 7 (PHP expecise: Build calculator) -->
 <!-- ++++++++++++++++++++++++++++++++++++++++ -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -265,4 +265,98 @@
     }
     ?>
 </body>
+</html> -->
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<!-- Class 8 (Arrays in PHP) -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in PHP</title>
+</head>
+<body>
+    <h1>Arrays in PHP</h1>
+
+    <?php
+    $arr = array("John", "Smith");
+    $arr2 = ["Mehedi", "Hasan", "Habib"];
+
+    var_dump($arr);
+
+    echo "<br>";
+    echo $arr2[1];
+
+    // unset($arr2[1]);
+
+    echo "<br>";
+    echo $arr2[1];
+
+    array_splice($arr2, 0, 1);
+
+    echo "<br>";
+    echo $arr2[1];
+
+    // associative array
+    $arr3 = [
+        'cooking' => 'Mr. A',
+        'security' => 'Mr. B',
+        'cleaning' => 'Mr. C',
+    ];
+    
+    echo "<br>";
+    print_r($arr3);
+
+    echo "<br>";
+    echo $arr3['security'];
+
+    // count content in array
+    $arr4 = ['a', 'b', 'c', 'd'];
+
+    echo "<br>";
+    echo count($arr4);
+
+    // sort array elements
+    $arr5 = ['c', 'a', 'b','d'];
+
+    sort($arr5);
+
+    echo "<br>";
+    print_r($arr5);
+
+    // add element to the last
+    $arr6 = ['a', 'b', 'c', 'd'];
+
+    array_push($arr6, 'e');
+
+    echo "<br>";
+    print_r($arr6);
+
+    // nested array
+    $arr7 = ['a', [1, 2, 3], 'c'];
+    echo "<br>";
+    // print_r($arr7);
+    echo $arr7[1][1];
+
+    $arr8 = [
+        'department1' => ['a', 'b', 'c'],
+        'department2' => ['d', 'e', 'f'],
+        'department3' => ['g', 'h', 'i'],
+    ];
+
+    echo "<br>";
+    echo $arr8['department2'][1];
+
+
+    ?>
+
+</body>
 </html>
+
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
+<!-- Class 9 (Bulit-in function in php) -->
+<!-- ++++++++++++++++++++++++++++++++++++++++ -->
